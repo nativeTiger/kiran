@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,7 +15,7 @@
     <!--==== Header ====-->
     <header class="header" id="header">
       <nav
-        class="container mx-auto px-6 lg:px-12 py-2 flex justify-between items-center"
+        class="container mx-auto px-6 lg:px-32 py-2 flex justify-between items-center"
       >
         <a href="#" class="text-3xl text-darkBlack font-bold">Kiran</a>
         <ul class="text-lg font-bold md:flex space-x-4 text-lightBlack">
@@ -29,11 +29,12 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <!--==== Home ====-->
-      <section class="home" id="home">
+      <section class="home py-10" id="home">
         <div
-          class="container mx-auto px-6 lg:px-12 py-10 grid gap-y-12 md:grid-cols-2 md:gap-x-12"
+          class="container mx-auto px-6 lg:px-32 py-4 grid gap-y-12 md:gap-x-12 md:grid-cols-2"
         >
           <div class="">
             <h1
@@ -86,39 +87,253 @@
               </a>
             </div>
           </div>
-          <img src="home.svg" alt="home-image" class="" />
+          <img src="images/home.svg" alt="home-image" class="" />
         </div>
       </section>
+
       <!--==== Specialize In ====-->
-      <section class="specialize" id="specialize">
-        <span class="block text-center text-sm font-semibold text-darkYellow"
+      <section class="specialize py-10" id="specialize">
+        <span
+          class="block text-center text-sm font-semibold text-darkYellow uppercase"
           >What I Do</span
         >
         <h2
-          class="text-xl text-center py-3 lg:text-4xl text-darkBlack font-black tracking-wider"
+          class="text-xl capitalize text-center py-3 lg:text-4xl text-darkBlack font-black tracking-wider"
         >
           Specializing In
         </h2>
-        <div class="container mx-auto px-6 lg:px-12 py-10">
-          <figure class="space-x-4">
-            <div class="bg-orange-200 text-darkYellow rounded-xl">
-              <img src="frontend.svg" alt="frontend-image" class="" />
+        <div
+          class="container mx-auto px-6 lg:px-32 py-11 grid gap-y-12 md:gap-x-20 md:grid-cols-2"
+        >
+          <figure class="flex space-x-6">
+            <div
+              class="bg-orange-200 rounded-xl p-4 flex items-center justify-center"
+            >
+              <img
+                src="images/frontend.svg"
+                alt="frontend-image"
+                class="w-48"
+              />
             </div>
             <figcaption>
-              <h2 class="">frontend development</h2>
-              <p class="">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus provident doloremque aliquam dolorum accusantium
+              <h2
+                class="text-xl font-semibold capitalize text-darkBlack tracking-wide"
+              >
+                frontend development
+              </h2>
+              <p class="pt-3 text-base font-medium text-gray-500 tracking-wide">
+                A solid understanding of HTML, CSS, JavaScript and popular
+                frameworks React.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="flex space-x-6">
+            <div
+              class="bg-red-300 rounded-xl p-4 flex items-center justify-center"
+            >
+              <img src="images/backend.svg" alt="frontend-image" class="w-48" />
+            </div>
+            <figcaption>
+              <h2
+                class="text-xl font-semibold capitalize text-darkBlack tracking-wide"
+              >
+                backend development
+              </h2>
+              <p class="pt-3 text-base font-medium text-gray-500 tracking-wide">
+                A strong understanding of Node.js, RESTful APIs, web security,
+                and performance optimization techniques.
               </p>
             </figcaption>
           </figure>
         </div>
       </section>
+
       <!--==== Best Work ====-->
+
       <!--==== Skills and Experiences ====-->
+      <section class="specialize py-10" id="specialize">
+        <span
+          class="block uppercase text-center text-sm font-semibold text-darkYellow"
+          >about me</span
+        >
+        <h2
+          class="text-xl capitalize text-center py-3 lg:text-4xl text-darkBlack font-black tracking-wider"
+        >
+          skills & experiences
+        </h2>
+        <div
+          class="container mx-auto px-6 lg:px-32 py-11 grid gap-y-12 md:gap-x-20 md:grid-cols-2"
+        >
+          <div class="grid gap-8 grid-cols-3">
+            <span
+              class="text-6xl text-orange-500 bg-purple-100 p-6 rounded-3xl text-center"
+              ><i class="bx bxl-html5"></i>
+              <h5 class="text-sm font-semibold tracking-wide">HTML</h5>
+            </span>
+            <span
+              class="text-6xl text-orange-600 bg-rose-100 p-6 rounded-3xl text-center"
+              ><i class="bx bxl-css3"></i>
+              <h5 class="text-sm font-semibold tracking-wide">CSS</h5>
+            </span>
+            <span
+              class="text-6xl text-sky-600 bg-sky-100 rounded-3xl p-6 text-center"
+              ><i class="bx bxl-tailwind-css"></i>
+              <h5 class="text-sm font-semibold tracking-wide">Tailwind</h5>
+            </span>
+            <span
+              class="text-6xl text-cyan-700 bg-cyan-100 rounded-3xl p-6 text-center"
+              ><i class="bx bxl-react"></i>
+              <h5 class="text-sm font-semibold tracking-wide">React</h5>
+            </span>
+            <span
+              class="text-6xl text-green-500 bg-green-100 rounded-3xl p-6 text-center"
+              ><i class="bx bxl-nodejs"></i>
+              <h5 class="text-sm font-semibold tracking-wide">Node JS</h5>
+            </span>
+            <span
+              class="text-6xl text-sky-950 bg-teal-100 rounded-3xl p-6 text-center"
+              ><i class="bx bxl-python"></i>
+              <h5 class="text-sm font-semibold tracking-wide">Python</h5>
+            </span>
+          </div>
+          <div class="grid gap-y-6">
+            <div class="flex space-x-10">
+              <div>
+                <span
+                  class="bg-sky-600 h-3 w-3 inline-block rounded-full"
+                ></span>
+              </div>
+              <div>
+                <h3
+                  class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                >
+                  software engineer internship
+                </h3>
+                <p class="text-sm font-normal text-gray-500 capitalize py-1.5">
+                  cubedsteps pvt. ltd.
+                </p>
+                <span class="text-sm font-medium text-gray-400"
+                  ><i class="bx bx-calendar"></i> Apr 2021 - Jun 2021 · 3
+                  months</span
+                >
+              </div>
+            </div>
+            <div class="flex space-x-10">
+              <div>
+                <span
+                  class="bg-sky-600 h-3 w-3 inline-block rounded-full"
+                ></span>
+              </div>
+              <div>
+                <h3
+                  class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                >
+                  junior frontend developer
+                </h3>
+                <p class="text-sm font-normal text-gray-500 capitalize py-1.5">
+                  Reflex IT Solution Pvt. Ltd.
+                </p>
+                <span class="text-sm font-medium text-gray-400"
+                  ><i class="bx bx-calendar"></i> Dec 2021 - Jun 2022 · 7
+                  months</span
+                >
+              </div>
+            </div>
+            <div class="flex space-x-10">
+              <div>
+                <span
+                  class="bg-sky-600 h-3 w-3 inline-block rounded-full"
+                ></span>
+              </div>
+              <div>
+                <h3
+                  class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                >
+                  Full Stack Engineer
+                </h3>
+                <p class="text-sm font-normal text-gray-500 capitalize py-1.5">
+                  Palm Mind Technology
+                </p>
+                <span class="text-sm font-medium text-gray-400"
+                  ><i class="bx bx-calendar"></i> Nov 2022 · 1 month</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <!--==== Footer ====-->
-    <footer></footer>
+    <footer class="footer" id="footer">
+      <section class="contact py-10" id="contact">
+        <span
+          class="block uppercase text-center text-sm font-semibold text-darkYellow"
+          >contact me</span
+        >
+        <h2
+          class="text-xl capitalize text-center py-3 lg:text-4xl text-darkBlack font-black tracking-wider"
+        >
+          stay connected
+        </h2>
+
+        <div
+          class="container mx-auto px-6 lg:px-32 py-11 grid gap-y-12 md:gap-x-12 md:grid-cols-2"
+        >
+          <div>
+            <h2 class="text-xl font-semibold text-darkBlack tracking-wide">
+              Got a Project? Let's Talk
+            </h2>
+            <p class="py-4 text-sm font-medium text-gray-400 capitalize">
+              sukedhara, kathmandu <br />
+              (+977) 9842760353
+            </p>
+            <a
+              class="underline text-darkYellow text-lg font-bold hover:text-orange-500 duration-300"
+              href="mailto:kiran.kumal714@gmail.com"
+              >kiran.kumal714@gmail.com <i class="bx bx-right-arrow-alt"></i
+            ></a>
+          </div>
+          <div class="">
+            <h2
+              class="text-xl capitalize font-semibold text-darkBlack tracking-wide pb-4"
+            >
+              send message
+            </h2>
+            <form action="" class="flex flex-col space-y-4">
+              <input
+                type="text"
+                name="name"
+                value=""
+                placeholder="Your Name"
+                class="bg-slate-50 text-lg text-gray-500 font-normal px-4 py-2 focus:border-orange-400 outline-none border-2 rounded-md duration-300"
+              />
+
+              <input
+                type="email"
+                name="email"
+                value=""
+                placeholder="Your Email"
+                class="bg-slate-50 text-lg text-gray-500 font-normal px-4 py-2 focus:border-orange-400 outline-none border-2 rounded-md duration-300"
+              />
+              <textarea
+                class="bg-slate-50 text-lg text-gray-500 font-normal px-4 py-2 focus:border-orange-400 outline-none border-2 rounded-md duration-300 no-scrollbar"
+                name="message"
+                id=""
+                cols="30"
+                rows="4"
+                placeholder="Your Message"
+              ></textarea>
+              <input
+                type="submit"
+                value="Send"
+                class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
