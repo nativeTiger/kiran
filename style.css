@@ -14,4 +14,30 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .swiper-center {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 2rem !important;
+    height: 2rem !important;
+    color: #f54c01 !important;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 1rem !important;
+  }
+}
+.scroll-header {
+  @apply shadow-sm;
 }

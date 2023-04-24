@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="images/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -13,12 +13,17 @@
   </head>
   <body class="bg-slate-50 font-roboto">
     <!--==== Header ====-->
-    <header class="header" id="header">
+    <header
+      class="header sticky left-0 top-0 w-full z-10 bg-slate-50"
+      id="header"
+    >
       <nav
-        class="container mx-auto px-6 lg:px-32 py-2 flex justify-between items-center"
+        class="container mx-auto px-6 lg:px-32 flex justify-between items-center"
       >
-        <a href="#" class="text-3xl text-darkBlack font-bold">Kiran</a>
-        <ul class="text-lg font-bold md:flex space-x-4 text-lightBlack">
+        <a href="#" class="text-3xl text-darkBlack font-bold">
+          <img src="images/logo.png" alt="" class="w-24" />
+        </a>
+        <ul class="text-sm font-medium text-gray-400 md:flex space-x-4">
           <li>
             <h5>Call Me: (+977) 9842760353</h5>
           </li>
@@ -32,7 +37,7 @@
 
     <main>
       <!--==== Home ====-->
-      <section class="home py-10" id="home">
+      <section class="home py-12" id="home">
         <div
           class="container mx-auto px-6 lg:px-32 py-4 grid gap-y-12 md:gap-x-12 md:grid-cols-2"
         >
@@ -46,21 +51,23 @@
             <p
               class="text-lg text-gray-500 font-medium tracking-wide py-6 lg:pt-8 lg:pb-12"
             >
-              Seeking a position that will utilize my skills and experience to
-              solve the real-world problems of people with the help of
-              technology.
+              Always willing to utilize my skills and experiences to solve the
+              real-world problems of people with the help of technology.
             </p>
             <div class="flex space-x-4 items-center">
-              <button
-                class="bg-darkYellow px-8 py-3 rounded-xl hover:bg-lightYellow text-white text-lg font-semibold capitalize duration-300"
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/13HQeoVINqwiDakZwToKZY3Wma3CmMpnE/view?usp=share_link"
+                class="bg-darkYellow px-8 py-3 rounded-xl hover:bg-orange-500 text-white text-lg font-semibold capitalize duration-300"
               >
                 hire me
-              </button>
-              <button
-                class="bg-darkGreen px-8 py-3 rounded-xl hover:bg-lightGreen text-darkBlack text-lg font-semibold capitalize duration-300"
+              </a>
+              <a
+                href="#contact"
+                class="bg-teal-100 px-8 py-3 rounded-xl hover:bg-teal-200 text-darkBlack text-lg font-semibold capitalize duration-300"
               >
                 let's chat
-              </button>
+              </a>
             </div>
             <div class="flex space-x-3 items-center pt-10 lg:pt-16">
               <a
@@ -149,7 +156,160 @@
       </section>
 
       <!--==== Best Work ====-->
-
+      <section class="project" id="project">
+        <span
+          class="block text-center text-sm font-semibold text-darkYellow uppercase"
+          >portfolio</span
+        >
+        <h2
+          class="text-xl capitalize text-center py-3 lg:text-4xl text-darkBlack font-black tracking-wider"
+        >
+          my best work
+        </h2>
+        <div class="container mx-auto px-6 lg:px-32 py-11">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-center">
+                <figure class="shadow-lg rounded-md">
+                  <img src="images/social.png" alt="" class="" />
+                  <figcaption class="py-6 px-8">
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                    >
+                      social application
+                    </a>
+                    <p
+                      class="text-sm font-medium text-gray-400 capitalize pt-2 pb-6"
+                    >
+                      a facebook like social media application built using MERN
+                      stack.
+                    </p>
+                    <a
+                      href="https://github.com/nativeTiger/social-app-frontend"
+                      target="_blank"
+                      class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+                    >
+                      code <i class="bx bxl-github"></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide swiper-center">
+                <figure class="shadow-lg rounded-md">
+                  <img src="images/portfolio.png" alt="" class="" />
+                  <figcaption class="py-6 px-8">
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                    >
+                      personal site
+                    </a>
+                    <p
+                      class="text-sm font-medium text-gray-400 capitalize pt-2 pb-6"
+                    >
+                      a portfolio site built using HTML, tailwind CSS and
+                      javaScript.
+                    </p>
+                    <a
+                      href="https://github.com/nativeTiger/personal-website"
+                      target="_blank"
+                      class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+                    >
+                      code <i class="bx bxl-github"></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide swiper-center">
+                <figure class="shadow-lg rounded-md">
+                  <img src="images/yipl.png" alt="" class="" />
+                  <figcaption class="py-6 px-8">
+                    <a
+                      href="https://nativetiger.github.io/yipl-frontend-challenge/"
+                      target="_blank"
+                      class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                    >
+                      young innovation challenge
+                    </a>
+                    <p
+                      class="text-sm font-medium text-gray-400 capitalize pt-2 pb-6"
+                    >
+                      YIPL internship challenge built using HTML, SCSS and
+                      javaScript.
+                    </p>
+                    <a
+                      href="https://github.com/nativeTiger/yipl-frontend-challenge"
+                      target="_blank"
+                      class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+                    >
+                      code <i class="bx bxl-github"></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide swiper-center">
+                <figure class="shadow-lg rounded-md">
+                  <img src="images/aala.png" alt="" class="" />
+                  <figcaption class="py-6 px-8">
+                    <a
+                      href="#"
+                      class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                    >
+                      ecommerce site
+                    </a>
+                    <p
+                      class="text-sm font-medium text-gray-400 capitalize pt-2 pb-6"
+                    >
+                      an e-commerce application built using react and styling
+                      with tailwind CSS.
+                    </p>
+                    <a
+                      href="https://github.com/nativeTiger/ecommerce-frontend"
+                      target="_blank"
+                      class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+                    >
+                      code <i class="bx bxl-github"></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide swiper-center">
+                <figure class="shadow-lg rounded-md">
+                  <img src="images/send-mail.png" alt="" class="" />
+                  <figcaption class="py-6 px-8">
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="text-lg font-semibold capitalize text-darkBlack tracking-wide"
+                    >
+                      send mail
+                    </a>
+                    <p
+                      class="text-sm font-medium text-gray-400 capitalize pt-2 pb-6"
+                    >
+                      mail sending node-JS application built using node-mailer
+                      and google services.
+                    </p>
+                    <a
+                      href="https://github.com/nativeTiger/node-mailer"
+                      target="_blank"
+                      class="bg-darkYellow px-8 py-3 rounded-md hover:bg-orange-500 cursor-pointer text-white text-lg font-semibold capitalize duration-300"
+                    >
+                      code <i class="bx bxl-github"></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
       <!--==== Skills and Experiences ====-->
       <section class="specialize py-10" id="specialize">
         <span
@@ -300,11 +460,15 @@
             >
               send message
             </h2>
-            <form action="" class="flex flex-col space-y-4">
+            <form
+              action="https://formspree.io/f/xqkowgwq"
+              method="POST"
+              class="flex flex-col space-y-4"
+            >
               <input
                 type="text"
                 name="name"
-                value=""
+                required
                 placeholder="Your Name"
                 class="bg-slate-50 text-lg text-gray-500 font-normal px-4 py-2 focus:border-orange-400 outline-none border-2 rounded-md duration-300"
               />
@@ -312,7 +476,7 @@
               <input
                 type="email"
                 name="email"
-                value=""
+                required
                 placeholder="Your Email"
                 class="bg-slate-50 text-lg text-gray-500 font-normal px-4 py-2 focus:border-orange-400 outline-none border-2 rounded-md duration-300"
               />
@@ -322,6 +486,7 @@
                 id=""
                 cols="30"
                 rows="4"
+                required
                 placeholder="Your Message"
               ></textarea>
               <input
