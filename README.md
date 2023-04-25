@@ -1,4 +1,4 @@
 # kiran
 
 
-(https://nativetiger.github.io/yipl-frontend-challenge)
+(https://kiran-mocha.vercel.app/)
