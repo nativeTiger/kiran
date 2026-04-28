@@ -1,21 +1,64 @@
 services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes # for persistence
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
   app1:
     build: .
     environment:
       - APP_NAME=app1
+      - SESSION_SECRET=CbNlR_B1paqnhwA7VIcaaub0YZW13i-6O-0pIqtDfLvYq3Tn6MTNj9uutTDuBIiw
+      - REDIS_URL=redis://redis:6379
     ports:
       - "3001:3000"
+    depends_on:
+      redis:
+        condition: service_healthy
 
   app2:
     build: .
     environment:
       - APP_NAME=app2
+      - SESSION_SECRET=CbNlR_B1paqnhwA7VIcaaub0YZW13i-6O-0pIqtDfLvYq3Tn6MTNj9uutTDuBIiw
+      - REDIS_URL=redis://redis:6379
     ports:
       - "3002:3000"
+    depends_on:
+      redis:
+        condition: service_healthy
 
   app3:
     build: .
     environment:
       - APP_NAME=app3
+      - SESSION_SECRET=CbNlR_B1paqnhwA7VIcaaub0YZW13i-6O-0pIqtDfLvYq3Tn6MTNj9uutTDuBIiw
+      - REDIS_URL=redis://redis:6379
     ports:
       - "3003:3000"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app1
+      - app2
+      - app3
+
+volumes:
+  redis_data:

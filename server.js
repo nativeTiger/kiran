@@ -2,6 +2,8 @@ import express from "express";
 import { fileURLToPath } from "url";
 import path from "path";
 import session from "express-session";
+import { createClient } from "redis";
+import { RedisStore } from "connect-redis";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,9 +12,24 @@ const app = express();
 const port = 3000;
 const application_name = process.env.APP_NAME;
 
+const redisClient = createClient({
+  url: process.env.REDIS_URL,
+});
+
+redisClient.on("error", (err) => console.log("Redis Client Error", err));
+redisClient.on("connect", () =>
+  console.log(`[${application_name}] Redis connected`),
+);
+
+await redisClient.connect();
+
 app.use(
   session({
-    secret: "CbNlR_B1paqnhwA7VIcaaub0YZW13i-6O-0pIqtDfLvYq3Tn6MTNj9uutTDuBIiw",
+    store: new RedisStore({
+      client: redisClient,
+      prefix: "session:",
+    }),
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -27,11 +44,26 @@ app.use(express.static("dist"));
 app.get("/hello", (req, res) => {
   if (!req.session.views) req.session.views = 0;
   req.session.views++;
+  req.session.name = "Kiran";
   // console.log(`Hello From ${application_name}`);
   console.log(
     `[${application_name}] Views: ${req.session.views} | SessionID: ${req.sessionID}`,
   );
-  res.sendFile(__dirname + "/dist/index.html");
+  res.json({
+    servedBy: application_name,
+    sessionId: req.session.id,
+    visits: req.session.views,
+  });
+
+  // res.sendFile(__dirname + "/dist/index.html");
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) return res.status(500).json({ error: "Could not log out" });
+    res.clearCookie("connect.sid");
+    res.json({ message: "Logged out" });
+  });
 });
 
 app.listen(port, () => {
